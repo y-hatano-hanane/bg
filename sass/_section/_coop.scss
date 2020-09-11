@@ -38,8 +38,9 @@
     }
   }
 
-  @include mediaQuery-up(md) {
-    padding: $minspacer_v*6 $minspacer_h;
+
+  @include mediaQuery-up(sm) {
+    padding: $minspacer_v*3 $minspacer_h;
     font-size: 1.6rem;
     .coop {
       &-box {
@@ -58,4 +59,10 @@
       }
     }
   }
+
+  @include mediaQuery-up(md) {
+    padding: $minspacer_v*6 $minspacer_h;
+  }
+
+
 }
