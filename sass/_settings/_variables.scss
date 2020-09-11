@@ -1,0 +1,46 @@
+// size
+$minspacer_v: 9px;
+$minspacer_h: 12px;
+
+$spacerSize_v: (
+  s: $minspacer_v*6,
+  m: $minspacer_v*12,
+  l: $minspacer_v*24
+);
+
+$sectionSpacer_sp_v: $minspacer_v*5;
+$sectionSpacer_sp_h: $minspacer_h;
+$padding_sp_v: $minspacer_v*2;
+$padding_sp_h: $minspacer_h*5;
+
+$sectionSpacer_pc_v: $minspacer_v*15;
+$padding_pc_v: $minspacer_v*10;
+$padding_pc_h: $minspacer_h*10;
+
+// color
+$color-brand: #ffb8ac;
+
+$black: #2C3242;
+$grey-der: #323232;
+$grey-d: #6c6c6c;
+$grey-m: #cacaca;
+$grey-l: #f6f4f4;
+$white: #fff;
+
+$green-l: #C3CDAD;
+$purple-l: #BBB2C6;
+$pink-l: #E1C8D0;
+
+$category_colors: $purple-l, $pink-l, $green-l;
+
+// font
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&text=QA&display=swap');
+
+$font-family-sans-serif: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif, serif;
+$font-family-serif: 游明朝, "Yu Mincho", YuMincho, "Hiragino Mincho ProN", "Hiragino Mincho Pro", HGS明朝E, serif;
+$font-family-handwritten: 'Fredericka the Great', cursive;
+
+$fontSize_s: 1.3rem;
+$fontSize_m: 1.6rem;
+$fontSize_l: 1.8rem;
+$fontSize_ler: 2.2rem;

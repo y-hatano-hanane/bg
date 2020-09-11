@@ -1,0 +1,69 @@
+@charset "UTF-8";
+
+@import "./_settings/_mediaQuery.scss";
+@import "./_settings/_variables.scss";
+
+$fixedfooter_h: 62 + $minspacer_v*4;
+@include mediaQuery-up(md) {
+  $fixedfooter_h: 62 + $minspacer_v*2;
+}
+
+@import "./_base/_tags.scss";
+@import "./_base/_buttons.scss";
+
+.wbr {
+  display: inline-block;
+}
+
+.pc-only {
+  display: none;  
+}
+@include mediaQuery-up(sm) {
+  .sp-only {
+    display: none;  
+  }
+  .pc-only {
+    display: unset;  
+  }
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  color: $black;
+  font-size: 1.6rem;
+  font-family: $font-family-serif;
+  line-height: 1.6;
+}
+
+h2 {
+  font-size: $fontSize_l;
+}
+
+h3, h4, h5 {
+  font-size: $fontSize_m;
+}
+
+.sec_title{
+  margin-bottom: $minspacer_v*4;
+  text-align: center;
+}
+
+@import "./_section/_coop.scss";
+@import "./_section/_faq.scss";
+@import "./_section/_operation.scss";
+@import "./_section/_media.scss";
+@import "./_section/_cost.scss";
+@import "./_section/_voice_title.scss";
+@import "./_section/_voiceuser.scss";
+@import "./_section/_voiceshop.scss";
+@import "./_section/_chanceflower.scss";
+@import "./_section/_point.scss";
+@import "./_section/_hero.scss";
+@import "./_section/_fixedfooter.scss";
+
+body {
+  padding-bottom: $fixedfooter_h;
+}

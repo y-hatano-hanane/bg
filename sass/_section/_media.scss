@@ -1,0 +1,28 @@
+.sec_media {
+  padding: $sectionSpacer_sp_v 0;
+  @include mediaQuery-up(md) {
+    padding: $sectionSpacer_pc_v 0;
+  }
+}
+
+.media-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: center;
+  width: 96%;
+  max-width: 960px;
+  margin: auto;
+  &-item {
+    // margin-bottom: $minspacer_h;
+    width: (100%/3);
+    padding-top: 20%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+  &-name {
+    position: absolute;
+    opacity: 0;
+  }
+}

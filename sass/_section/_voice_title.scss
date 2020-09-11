@@ -1,0 +1,46 @@
+.sec_voiceshop, .sec_voiceuser {
+  .sec_title {
+    position: relative;
+    padding: $minspacer_h;
+    text-align: left;
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: -50%;
+      right: 0;
+      width: 132px;
+      height: 132px;
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+    @include mediaQuery-up(md) {
+      text-align: center;
+      &:after {
+        top: -80%;
+      }
+    }
+  }
+}
+
+.sec_voiceshop {
+  .sec_title {
+    &:after {
+      background-image: url(../image/flower_02.svg);
+      @include mediaQuery-up(md) {
+        right: calc(50% + 5em);
+      }
+    }
+  }
+}
+.sec_voiceuser {
+  .sec_title {
+    &:after {
+      background-image: url(../image/flower_01.svg);
+      @include mediaQuery-up(md) {
+        right: calc(50% - 9em);
+      }
+    }
+  }
+}

@@ -1,0 +1,65 @@
+// setting
+$bp-small-smartphone-portrait: 320px;
+$bp-smartphone-portrait: 576px;
+$bp-tablet-portrait: 768px;
+$bp-laptop_s: 1000px;
+$bp-tablet-landscape: 1024px;
+$bp-laptop_m: 1366px;
+$bp-laptop_l: 1920px;
+
+
+$breakpoints:(
+  xs: $bp-small-smartphone-portrait,
+  sm: $bp-smartphone-portrait + 1,
+  md: $bp-tablet-portrait + 1,
+  lg: $bp-tablet-landscape + 1,
+  xl: $bp-laptop_m + 1
+) !default;
+
+
+@mixin mediaQuery-up($breakpoint) {
+  @media ( min-width: #{map-get($breakpoints, $breakpoint)} ) {
+    @content;
+  }
+}
+
+@mixin mediaQuery-down($breakpoint) {
+  @media ( max-width: #{map-get($breakpoints, $breakpoint)} ) {
+    @content;
+  }
+}
+
+
+@mixin mediaQuery-between($breakpoint1, $breakpoint2) {
+  $size1: null;
+  $size2: null;
+  @each $bp, $size in $breakpoints{
+    @if ( $bp == $breakpoint1 ){
+      $size1: $size;
+    }
+    @if ( $bp == $breakpoint2 ){
+      $size2: $size;
+    }
+  }
+
+  @if ( $size1 <= $size2 ) {
+    @media ( min-width: #{map-get($breakpoints, $breakpoint1)} ) and ( max-width: #{map-get($breakpoints, $breakpoint2)} ) {
+      @content;
+    }
+  } @else {
+    @media ( min-width: #{map-get($breakpoints, $breakpoint2)} ) and ( max-width: #{map-get($breakpoints, $breakpoint1)} ) {
+      @content;
+    }
+  }
+
+}
+
+//browser
+@mixin browser($browser) {
+  @if ( $browser == "ie" ) {
+    @media all and (-ms-high-contrast: none){
+      @content;
+    }
+  }
+}
+

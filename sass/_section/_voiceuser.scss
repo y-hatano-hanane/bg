@@ -1,0 +1,70 @@
+
+.sec_voiceuser {
+  padding: $sectionSpacer_sp_v 0;
+  background-color: $grey-m;
+  @include mediaQuery-up(md) {
+    padding: $sectionSpacer_pc_v 0;
+  }
+
+  .voice {
+    $baloonSize: 12px;
+    position: relative;
+    margin: $minspacer_v ($minspacer_h + $baloonSize) $minspacer_v $minspacer_h;
+    padding: $minspacer_v*2 $minspacer_h*2;
+    background-color: $white;
+    border-radius: 2px;
+    filter: drop-shadow(2px 2px 1px rgba($black, 0.2));
+    &:after {
+      content: "";
+      position: absolute;
+      display: block;
+      right: -1*$baloonSize + 2;
+      bottom: $minspacer_v*2;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: $baloonSize/2 0 $baloonSize/2 $baloonSize*0.86;
+      border-color: transparent transparent transparent $white;
+    }
+
+    &-attribute {
+      font-size: 0.76em;
+      text-align: right;
+      &:before {
+        content: "（";
+      }
+      &:after {
+        content: ")";
+      }
+    }
+  }
+  @include mediaQuery-up(sm) {
+    .voiceuser-box {
+      display: flex;
+      flex-direction: column;
+    }
+    .voice {
+      width: 72%;
+      &:nth-child(2n+1) {
+        margin-right: auto;
+      }
+      &:nth-child(2n) {
+        margin-left: auto;
+      }
+    }
+  }
+
+  @include mediaQuery-up(md) {
+    .voiceuser-box {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      max-width: 1200px;
+      margin: auto;
+    }  
+    .voice {
+      width: (72%/3);
+    }
+  }
+}
+

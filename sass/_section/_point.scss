@@ -1,0 +1,124 @@
+.sec_point {
+  max-width: $bp-laptop_m;
+  margin: $sectionSpacer_sp_v auto;
+  @include mediaQuery-up(md) {
+    margin: $sectionSpacer_pc_v auto;
+  }
+}
+
+.point-list {
+  .point {
+    position: relative;
+    padding: $minspacer_v $minspacer_h $minspacer_v*2;
+    &:not(:first-of-type) {
+      margin-top: $minspacer_v*6;
+    }
+    &:before {
+      content: "";
+      $size: 40px;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 0 $size $size;
+      border-color: transparent;
+    }
+    &:after {
+      content: "";
+      $size: $minspacer_v*2;
+      position: absolute;
+      display: block;
+      bottom: 0;
+      right: 0;
+      width: $size;
+      height: $size;
+    }
+    @each $color in $category_colors {
+      $index : index($category_colors, $color);
+      &:nth-of-type(#{$index}) {
+        &:before {
+          border-bottom-color: $color;
+        }
+        &:after {
+          background-color: $color;
+        }
+      }
+    }
+
+    &-title {
+      text-align: center;
+    }
+
+    &-image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 50vw;
+      img {
+        height: 50%;
+        width: auto;
+      }
+    }
+
+    &-text {
+      display: inline-block;
+      line-height: 1.4;
+    }
+
+  }
+  @include mediaQuery-up(sm) {
+    .point {
+      display: grid;
+      grid-template-columns: 58fr 100fr;
+      grid-template-rows: auto auto;
+      grid-gap: $minspacer_v $minspacer_h;
+      margin-left: $minspacer_h;
+      margin-right: $minspacer_h;
+      &-title {
+        grid-column: 2/3;
+        grid-row: 1/2;
+      }
+      &-image {
+        grid-column: 1/2;
+        grid-row: 1/3;
+        height: 100%;
+        img {
+          height: 60%;
+        };
+      }
+      &-text {
+        grid-column: 2/3;
+        grid-row: 2/3;
+      }
+    }
+  }
+  @include mediaQuery-up(md) {
+    display: flex;
+    .point {
+      flex: 1;
+      display: block;
+      margin: 0 !important;
+      &-image {
+        height: (100vw/3)*0.62;
+        img {
+          height: 46%;
+        }
+      }
+    }
+  }
+}
+
+.point {
+  &-key {
+    position: relative;
+    right: -0.2em;
+    width: calc( 100% - 0.2em );
+    margin: $minspacer_v*8 0;
+    text-align: center;
+    font-size: min(1.6rem, #{(100vw/22)} );
+    font-weight: bold;
+  }
+}
