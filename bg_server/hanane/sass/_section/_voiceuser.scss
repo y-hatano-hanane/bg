@@ -64,6 +64,10 @@
     }  
     .voice {
       width: (72%/3);
+      &:nth-child(n) {
+        margin-left: $minspacer_h;
+        margin-right: $minspacer_h*2;
+      }
     }
   }
 }
