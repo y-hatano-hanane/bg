@@ -27,11 +27,7 @@ $fixedfooter_h: 62 + $minspacer_v*4;
   }
 }
 
-html {
-  font-size: 62.5%;
-}
-
-body {
+#main {
   color: $black;
   font-size: 1.6rem;
   font-family: $font-family-serif;

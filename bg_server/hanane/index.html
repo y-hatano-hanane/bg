@@ -51,7 +51,7 @@
               <li class="swiper-slide"><img src="./image/hero_04.jpg" alt="" class="swiper-lazy" /></li>
               <li class="swiper-slide"><img src="./image/hero_05.jpg" alt="" class="swiper-lazy" /></li>
             </ul>
-            <div class="swiper-pagination"></div>
+            <!-- <div class="swiper-pagination"></div> -->
           </div>
           <div class="buttons-box">
             <div class="button_main">
@@ -320,8 +320,8 @@
     <p>Copyright by BEAUTY GARAGE INC. All rights reserved.</p>
   </footer>
 
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-  <!-- <script src="./package/Swiper/swiper-bundle.min.js"></script> -->
+  <!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
+  <script src="./package/Swiper/swiper-bundle.min.js"></script>
   <script>
     
     var heroSwiper = new Swiper('.swiper-container', {
@@ -333,15 +333,15 @@
       slidesPerView: 'auto',
       centeredSlides: true,
       spaceBetween: 12,
-      pagination: {
-        el: '.swiper-pagination',
-        type: "progressbar"
-      },
+      // pagination: {
+      //   el: '.swiper-pagination',
+      //   type: "progressbar"
+      // },
       preloadImages: false,
       lazy: true
     })
     
   </script>
-  
+
 </body>
 </html>
