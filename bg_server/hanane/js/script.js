@@ -29,7 +29,7 @@ window.addEventListener('DOMContentLoaded', (e) => {
   })
 
   function set_fixedFooter() {
-    if (document.body.scrollTop > window_h/2 ) {
+    if (window.pageYOffset > window_h/2 ) {
       fixedFooter.classList.add('active')
     } else {
       fixedFooter.classList.remove('active')
