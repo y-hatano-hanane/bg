@@ -1,0 +1,403 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
+*{box-sizing:border-box;}
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; outline: 0; font-style: normal; font-weight: normal; font-size: 100%; vertical-align: baseline; background: transparent; }
+a { text-decoration: none;}
+img { vertical-align: bottom; max-width: 100%; }
+article, aside, canvas, details, figcaption, figure, footer, header, main, nav, section, summary { display: block; }
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+button, input, select, textarea { font-family: inherit; font-size: 100%; }
+input, textarea { margin: 0; padding: 0; -webkit-appearance: none; }
+nav, ol, ul { list-style: none; }
+table { border-collapse: collapse; border-spacing: 0; }
+html {width: auto; height: 100%; font-size: 62.5%; -webkit-text-size-adjust: 100%; margin: 0; padding: 0;}
+body {
+	font-family:"Noto Sans Japanese","メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	-webkit-font-smoothing: subpixel-antialiased;
+	-moz-osx-font-smoothing: unset;
+	line-height:1.4;
+	font-size:1.2rem;
+}
+@media screen and (min-width:768px){
+	html{font-size:72.5%;}
+}
+#main{margin-top:30px;}
+
+/* #header/#footer/#breadcrumb.start */
+#header{
+	width:100%;
+	border-top:28px solid #70accb;
+	border-bottom:1px solid #e0e0e0;
+}
+#header .inner,
+#breadcrumb{
+	max-width:1200px;
+	padding:0 15px;
+	margin:1.2rem auto;
+}
+#header .inner p.logo{max-width:97px;}
+#breadcrumb ol li,#breadcrumb ol li a{
+	color:#666;
+	font-size:12px;
+}
+#breadcrumb ol li{display:inline;}
+#breadcrumb ol li a{
+	text-decoration:none;
+	transition:all 0.2s ease;
+}
+#breadcrumb ol li a:hover{text-decoration:underline;}
+#breadcrumb ol li + li:before{
+	padding:0 5px;
+	font-size:12px;
+	color:#666;
+	font-family:FontAwesome;
+	content:'\f105';
+}
+#footer{
+	background:#999;
+	color:#FFF;
+	font-size:1rem;
+	padding:20px 10px;
+	text-align:center;
+}
+
+@media screen and (min-width:768px){
+	#header .inner p.logo{max-width:140px;}
+}
+
+/* #formWrap.start */
+#formWrap{
+	max-width:1200px;
+	margin:0 auto 40px;
+}
+#formWrap *{color:#444;}
+#formWrap a{color:#70accb;}
+#formWrap .br-PcNone{display:block;}
+#formWrap a:hover{text-decoration:underline;}
+#formWrap,#formWrap *{box-sizing:border-box;}
+#formWrap input,#formWrap textarea{border: 1px solid #ccc;}
+#formWrap input[type=radio],#formWrap input[type=checkbox]{
+	vertical-align: middle;
+	margin-right:3px;
+}
+#formWrap h1{
+	font-size:1.6rem;
+	text-align:center;
+	color:#000;
+	font-weight:bold;
+}
+
+@media screen and (min-width:768px){
+	#formWrap h1{font-size:2.0rem;}
+}
+
+/* RadioButton - customize .start */
+#formWrap label.custom_radio {
+	cursor:pointer;
+	position:relative;
+	padding-left:5px;
+	margin-right:20px;
+	margin-bottom:5px;
+	overflow: hidden;
+	padding-left:20px;
+	display:inline-block;
+	min-height:18px;
+}
+#formWrap label.custom_radio:before {
+	position: absolute;
+	width:15px;
+	height:15px;
+	border:1px solid #c9c9c9;
+	border-radius:50%;
+	left: 0;
+	top: 0;
+	content:'';
+	z-index:3;
+}
+#formWrap label.custom_radio:after {
+	content:'';
+	position: absolute;
+	width:9px;
+	height:9px;
+	border-radius: 100%;
+	left:4px;
+	top:4px;
+	background-color:#70accb;
+	z-index:1;
+}
+#formWrap label.custom_radio input{
+	-moz-appearance:none;
+	-webkit-appearance:none;
+	position:absolute;
+	z-index:2;
+	width: 20px;
+	height:20px;
+	left:-23px;
+	top:1px;
+	margin:0px;
+	box-shadow:20px -1px #FFF;
+}
+#formWrap label.custom_radio input:checked{box-shadow:none;}
+
+@media screen and (min-width:768px){
+	#formWrap label.custom_radio:before {top:1px;}
+	#formWrap label.custom_radio:after {top:5px;}
+}
+/* RadioButton - customize .end */
+
+/* CheckBox - customize .start */
+#formWrap label.custom_checkbox {
+	cursor:pointer;
+	position:relative;
+	padding-left:21px;
+	margin-bottom:5px;
+	overflow:hidden;
+	display:inline-block;
+	box-sizing:border-box;
+	min-height:18px;
+}
+#formWrap label.custom_checkbox:before {
+	content:'';
+	position:absolute;
+	width:15px;
+	height:15px;
+	left:0;
+	top:0;
+	border:1px solid #B3B3B3;
+	z-index:3;
+}
+#formWrap label.custom_checkbox:after {
+	content:'';
+	position:absolute;
+	top:8px;
+	left:5px;
+	display:block;
+	margin-top:-8px;
+	width:5px;
+	height:9px;
+	border-right:3px solid #70accb;
+	border-bottom:3px solid #70accb;
+	transform:rotate(45deg);
+	-webkit-transform:rotate(45deg);
+	-moz-transform:rotate(45deg);
+	z-index:1;
+}
+#formWrap label.custom_checkbox input{
+	-moz-appearance:none;
+	-webkit-appearance:none;
+	position:absolute;
+	left:-40px;
+	width:15px;
+	height:15px;
+	display:block;
+	box-shadow:41px 0px #FFF;
+	z-index:2;
+	margin:0px;
+	padding:0px;
+}
+#formWrap label.custom_checkbox input:checked {
+	box-shadow:none;
+}
+@media screen and (min-width:768px){
+	#formWrap label.custom_checkbox:before {top:1px;}
+	#formWrap label.custom_checkbox:after {top:9px;}
+}
+/* CheckBox - customize .end */
+
+#formWrap input[type=radio]{-webkit-appearance:radio;}
+#formWrap input[type=checkbox]{-webkit-appearance:checkbox;}
+#formWrap input,#formWrap textarea,#formWrap select{padding:3px;}
+#formWrap{font-family:'Noto Sans Japanese', sans-serif;}
+#formWrap input,#formWrap select{vertical-align:middle;}
+#formWrap .postalcode1{width:70px;}
+#formWrap .postalcode2{width:90px;}
+#formWrap .txt1{
+	padding:1.7rem 15px;
+	text-align:center;
+	border-bottom:1px solid #EAEAEA;
+}
+#formWrap h2{
+	font-size:1.4rem;
+	border-bottom:2px solid #CCC;
+	padding:2.5rem 10px .8rem;
+	margin-bottom:15px;
+	font-weight:bold;
+}
+#formWrap .formTable .inner,
+#formWrap .formTable dl.fieldBox dd{padding:10px;}
+#formWrap .error{
+	border:1px solid #F00;
+	padding:10px;
+	margin:20px 10px 0;
+	line-height:1.6;
+}
+#formWrap .formTable .select_l{
+	display:block;
+	text-indent:-2.2em;
+	padding-left:2.2em;
+}
+#formWrap .formTable dl.seminar dd .first{
+	margin-top:5px;
+	padding-top:20px;
+	border-top:1px solid #999;
+}
+#formWrap .formTable dl.fieldBox {
+  border:none;
+  margin:0 0 10px;
+  padding:0;
+}
+#formWrap .formTable dl.fieldBox dt{
+  background:#EAEAEA;
+  display:block;
+  font-weight: bold;
+  margin: 0;
+  padding:10px;
+  position: relative;
+  width: 100%;
+}
+#formWrap .formTable dl.fieldBox dt:after{
+  color: #666;
+  right: 0;
+  position: absolute;
+}
+#formWrap .formTable dl.fieldBox dd label{margin-right:10px;}
+#formWrap .formTable dl.seminar dd label{margin-right:0;}
+#formWrap .formTable p{margin-bottom:0.7rem; margin-top:0.7rem;}
+#formWrap .formTable dl.fieldBox dt:after{right:10px;}
+#formWrap .formTable dl.fieldBox dt:after,
+#formWrap .formTable .optionText.required{color:#F00;}
+#formWrap .formTable dl.fieldBox small{
+	display:block;
+	font-size:11px;
+	color:#666;
+	margin-top:5px;
+	margin-bottom:5px;
+}
+#formWrap .formTable .w10per{width:10%;}
+#formWrap .formTable .w20per{width:20%;}
+#formWrap .formTable .w30per{width:30%;}
+#formWrap .formTable .w40per{width:40%;}
+#formWrap .formTable .w50per{width:50%;}
+#formWrap .formTable .w60per{width:60%;}
+#formWrap .formTable .w70per{width:70%;}
+#formWrap .formTable .w80per{width:80%;}
+#formWrap .formTable .w90per{width:90%;}
+#formWrap .formTable .w100per{width:100%;}
+#formWrap .formTable .w10{width:10px;}
+#formWrap .formTable .w20{width:20px;}
+#formWrap .formTable .w30{width:30px;}
+#formWrap .formTable .w40{width:40px;}
+#formWrap .formTable .w50{width:50px;}
+#formWrap .formTable .w60{width:60px;}
+#formWrap .formTable .w70{width:70px;}
+#formWrap .formTable .w80{width:80px;}
+#formWrap .formTable .w90{width:90px;}
+#formWrap .formTable .w100{width:100px;}
+#formWrap .formTable .w110{width:110px;}
+#formWrap .formTable .w120{width:120px;}
+#formWrap .formTable .w130{width:130px;}
+#formWrap .formTable .w140{width:140px;}
+#formWrap .formTable .w150{width:150px;}
+#formWrap .formTable .w160{width:160px;}
+#formWrap .formTable .w170{width:170px;}
+#formWrap .formTable .w180{width:180px;}
+#formWrap .formTable .w190{width:190px;}
+#formWrap .formTable .w200{width:200px;}
+#formWrap .formTable .age{width:60px;}
+
+#formWrap .formTable .boxVariation1,
+#formWrap .formTable .boxVariation1 li{
+	margin-top:20px;
+	line-height:1.8;
+}
+#formWrap .formTable .boxVariation1 li input{
+	width:100%;
+	margin-bottom:10px;
+}
+#formWrap .formTable .fRight{padding-left:10px;}
+#formWrap .btnWrap{display:flex;}
+#formWrap .btnBox{
+	width:100%;
+	padding:15px 10px;
+	margin-top:20px;
+	border:1px solid #003366;
+	background:#003366;
+	color:#FFF;
+	font-weight:bold;
+	text-align:center;
+	display:block;
+	border-radius:3px;
+	cursor:pointer;
+	transition-duration: .3s;
+	font-size:1.3rem;
+}
+#formWrap .btnBox:hover{opacity:0.6;}
+#formWrap .btnBox span{
+	font-size:1.3rem;
+	color:#FFF;
+	font-weight:bold;
+	margin-left:1em;
+}
+#formWrap .btnBox.back{
+	width:48%;
+	margin-right:4%;
+	background:#FFF;
+	border:1px solid #EAEAEA;
+	color:#444;
+}
+#formWrap .btnBox.back span{
+	margin-left:0;
+	margin-right:1em;
+	color:#444;
+}
+#formWrap .btnBox.send{width:48%;}
+#formWrap .thanksTxt{
+	padding:4rem 10px 0;
+	margin-top:2rem;
+	border-top:1px solid #EAEAEA;
+}
+#formWrap .thanksTxt p{
+	text-align:center;
+	font-size:1.3rem;
+	line-height:1.6;
+}
+#formWrap .thanksTxt a:hover{text-decoration:none;}
+
+@media screen and (min-width:768px){
+	#formWrap .br-PcNone{display:none;}
+	#formWrap{
+		padding:0 15px;
+		margin-bottom:60px;
+	}
+	#formWrap h2{margin-top:20px;}
+	#formWrap .error{
+		padding:15px;
+		margin:20px 0 10px;
+	}
+	#formWrap .formTable dl.fieldBox{
+		display:flex;
+		border-bottom:1px solid #EAEAEA;
+		padding-bottom:10px;
+	}
+	#formWrap .formTable dl.fieldBox dt{
+		width:28%;
+		background:#FFF;
+		font-weight:normal;
+	}
+	#formWrap .formTable dl.fieldBox dd{width:72%;}
+	#formWrap .formTable dl.fieldBox dd > p{margin-top:0;}
+	#formWrap .formTable dl.fieldBox dd > input + p{margin-top:0.7rem;}
+	#formWrap .btnBox{
+		padding:18px 10px;
+		font-size:1.5rem;
+	}
+	#formWrap .thanksTxt{padding:2.4rem 10px; margin-top:60px;}
+	#formWrap .txt1{padding:2rem 15px 3rem;}
+}
+@media screen and (min-width:1024px){
+	#formWrap .thanksTxt{
+		padding:7rem 10px;
+		margin-top:40px;
+	}
+}
