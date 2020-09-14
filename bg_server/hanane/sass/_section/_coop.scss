@@ -1,7 +1,8 @@
 .sec_coop {
   padding: $minspacer_v*3 0;
   background: $color-brand;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
+  text-align: right;
 
   .coop {
     &-inner {
@@ -41,7 +42,6 @@
 
   @include mediaQuery-up(sm) {
     padding: $minspacer_v*3 $minspacer_h;
-    font-size: 1.6rem;
     .coop {
       &-box {
         display: flex;
