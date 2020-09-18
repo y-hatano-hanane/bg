@@ -130,7 +130,7 @@
 
   @include mediaQuery-up(md) {
     display: grid;
-    grid-template-columns: 6fr 3fr 5fr;
+    grid-template-columns: 6fr 4fr 5fr;
     grid-template-rows: 100%;
     align-items: flex-end;
     padding: $minspacer_v*5 $minspacer_h*3;
