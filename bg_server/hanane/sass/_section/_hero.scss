@@ -163,7 +163,15 @@
       max-width: 560px;
       margin-bottom: 2em;
     }
+    @include browser(ie) {
+      position: relative;
+      .sub_text {
+        position: absolute;
+        bottom: 48px;
+      }
+    }
   }
+
 }
 
 .main_thumb {
