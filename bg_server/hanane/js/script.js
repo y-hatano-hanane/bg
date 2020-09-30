@@ -1,9 +1,6 @@
 window.addEventListener('DOMContentLoaded', function(e) {
 
   const faq_triger = document.querySelectorAll('input[name="faq_trigger"]');
-  const box_faq = document.getElementById('box_faq');
-  let faq_active;
-  const className_faq_active = 'open';
 
   let window_h = window.innerHeight;
   const fixedFooter = document.getElementById('fixedFooter');
