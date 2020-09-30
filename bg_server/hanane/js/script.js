@@ -1,6 +1,7 @@
 window.addEventListener('DOMContentLoaded', function(e) {
 
-  let faq_triger = document.querySelectorAll('.faq_q');
+  const faq_triger = document.querySelectorAll('input[name="faq_trigger"]');
+  const box_faq = document.getElementById('box_faq');
   let faq_active;
   const className_faq_active = 'open';
 
@@ -13,19 +14,18 @@ window.addEventListener('DOMContentLoaded', function(e) {
   window.addEventListener('load', set_fixedFooter);
   window.addEventListener('scroll', set_fixedFooter);
 
-  for (let i = 0; i<faq_triger.length; i++) {
+  for (let i = 0; i < faq_triger.length; i++) {
     faq_triger[i].addEventListener('click', function() {
       let el = faq_triger[i];
-      console.log(el.classList.contains(className_faq_active))
-      if ( !el.classList.contains(className_faq_active)) {
-        if ( faq_active ) {
-          faq_active.classList.remove(className_faq_active);
+      if (el.checked) {
+        for (let j = 0; j<faq_triger.length; j++) {
+          if ( i !== j && faq_triger[j].checked ) {
+            console.log( faq_triger[j] )
+            faq_triger[j].checked = false
+          }
         }
-        faq_active = el;
-        el.classList.add(className_faq_active)
-      } else {
-        el.classList.remove(className_faq_active)
       }
+
     })
   }
 

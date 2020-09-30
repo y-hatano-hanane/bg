@@ -86,33 +86,23 @@
       font-size: 3.2rem * 1.4;
     }
   }
-  input[type="checkbox"] {
-    width: 0;
-    height: 0;
-    opacity: 0;
-    &:checked {
-      ~ {
-        .faq_q {
-          &:after {
-            transform: rotate(45deg) scale(-1, -1);
-          }
-        }
-        .faq_a {
-          top: 0;
-          max-height: 500px;
-          visibility: visible;
-          opacity: 1;
-          transform: translateY(0);
-          transition: all 100ms ease, opacity 300ms ease 150ms, transform 200ms ease 100ms;
-        }
+  .open {
+    &.faq_q {
+      &:after {
+        transform: rotate(45deg) scale(-1, -1);
       }
+    }
+    ~ .faq_a {
+      top: 0;
+      max-height: 500px;
+      visibility: visible;
+      opacity: 1;
+      transform: translateY(0);
+      transition: all 100ms ease, opacity 300ms ease 150ms, transform 200ms ease 100ms;
     }
   }
   @include mediaQuery-up(md) {
     margin-top: $minspacer_v*2;
-    input[type="checkbox"] {
-      display: none;
-    }
     &_q {
       padding-right: 0;
       cursor: normal;
