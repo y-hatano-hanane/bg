@@ -105,9 +105,9 @@
     margin-top: $minspacer_v*2;
     &_q {
       padding-right: 0;
-      cursor: unset;
+      cursor: normal;
       &:after {
-        content: unset;
+        content: none;
       }
     }
     &_a {
