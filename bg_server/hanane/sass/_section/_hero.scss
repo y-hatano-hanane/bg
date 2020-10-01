@@ -58,6 +58,12 @@
     padding: $minspacer_v $minspacer_h;
     line-height: 2;
   }
+  .main_thumb {
+    z-index: 2;
+    .main_thumb_item {
+      padding: 0 $minspacer_h;
+    }
+  }
 
   @include mediaQuery-up(md) {
     position: relative;

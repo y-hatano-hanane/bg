@@ -17,7 +17,7 @@
 
   <link rel="stylesheet" type="text/css" href="../common/css/style.css" />
 
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="./package/slick/slick.css"/>
   <link rel="stylesheet" type="text/css" href="./css/style.css" />
   <script src="./js/script.js" defer></script>
 </head>
@@ -52,12 +52,12 @@
           <div class="main_thumb">
             <div class="swiper-container">
               <ul class="swiper-wrapper">
-                <li class="swiper-slide"><img src="./image/hero_01.jpg" alt="" class="swiper-lazy" /></li>
-                <li class="swiper-slide"><img src="./image/hero_02.jpg" alt="" class="swiper-lazy" /></li>
-                <li class="swiper-slide"><img src="./image/hero_07.jpg" alt="" class="swiper-lazy" /></li>
-                <li class="swiper-slide"><img src="./image/hero_04.jpg" alt="" class="swiper-lazy" /></li>
-                <li class="swiper-slide"><img src="./image/hero_05.jpg" alt="" class="swiper-lazy" /></li>
-                <li class="swiper-slide"><img src="./image/hero_06.jpg" alt="" class="swiper-lazy" /></li>
+                <li class="swiper-slide main_thumb_item"><img src="./image/hero_01.jpg" alt="" class="swiper-lazy" /></li>
+                <li class="swiper-slide main_thumb_item"><img src="./image/hero_02.jpg" alt="" class="swiper-lazy" /></li>
+                <li class="swiper-slide main_thumb_item"><img src="./image/hero_07.jpg" alt="" class="swiper-lazy" /></li>
+                <li class="swiper-slide main_thumb_item"><img src="./image/hero_04.jpg" alt="" class="swiper-lazy" /></li>
+                <li class="swiper-slide main_thumb_item"><img src="./image/hero_05.jpg" alt="" class="swiper-lazy" /></li>
+                <li class="swiper-slide main_thumb_item"><img src="./image/hero_06.jpg" alt="" class="swiper-lazy" /></li>
               </ul>
             </div>
           </div>
@@ -337,21 +337,24 @@
     <p>Copyright by BEAUTY GARAGE INC. All rights reserved.</p>
   </footer>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="./package/jquery/jquery.min.js"></script>
+  <script type="text/javascript" src="./package/slick/slick.min.js"></script>
   <script>
     $().ready(function(){
       $('.swiper-wrapper').slick({
+        accessibility: false,
         autoplay: true,
-        autoplaySpeed: 3000,
+        autoplaySpeed: 0,
         arrows: false,
-        centerMode: false,
-        centerPadding: '12px',
+        centerMode: true,
+        centerPadding: '50px',
+        cssEase: 'linear',
         draggable: false,
         infinite: true,
         lazyLoad: 'progressive',
         pauseOnFocus: false,
         pauseOnHover: false,
+        speed: 5000,
         touchMove: false,
         variableWidth: true
       });
