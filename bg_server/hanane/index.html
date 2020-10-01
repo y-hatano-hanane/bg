@@ -50,16 +50,14 @@
             </div>
           </div>
           <div class="main_thumb">
-            <div class="swiper-container">
-              <ul class="swiper-wrapper">
-                <li class="swiper-slide main_thumb_item"><img src="./image/hero_01.jpg" alt="" class="swiper-lazy" /></li>
-                <li class="swiper-slide main_thumb_item"><img src="./image/hero_02.jpg" alt="" class="swiper-lazy" /></li>
-                <li class="swiper-slide main_thumb_item"><img src="./image/hero_07.jpg" alt="" class="swiper-lazy" /></li>
-                <li class="swiper-slide main_thumb_item"><img src="./image/hero_04.jpg" alt="" class="swiper-lazy" /></li>
-                <li class="swiper-slide main_thumb_item"><img src="./image/hero_05.jpg" alt="" class="swiper-lazy" /></li>
-                <li class="swiper-slide main_thumb_item"><img src="./image/hero_06.jpg" alt="" class="swiper-lazy" /></li>
-              </ul>
-            </div>
+            <ul id="mainThumb" class="main_thumb_box">
+              <li class="main_thumb_item"><img src="./image/hero_01.jpg" alt="" class="swiper-lazy" /></li>
+              <li class="main_thumb_item"><img src="./image/hero_02.jpg" alt="" class="swiper-lazy" /></li>
+              <li class="main_thumb_item"><img src="./image/hero_07.jpg" alt="" class="swiper-lazy" /></li>
+              <li class="main_thumb_item"><img src="./image/hero_04.jpg" alt="" class="swiper-lazy" /></li>
+              <li class="main_thumb_item"><img src="./image/hero_05.jpg" alt="" class="swiper-lazy" /></li>
+              <li class="main_thumb_item"><img src="./image/hero_06.jpg" alt="" class="swiper-lazy" /></li>
+            </ul>
           </div>
           <div class="buttons-box">
             <div class="button_main">
@@ -340,8 +338,8 @@
   <script src="./package/jquery/jquery.min.js"></script>
   <script type="text/javascript" src="./package/slick/slick.min.js"></script>
   <script>
-    $().ready(function(){
-      $('.swiper-wrapper').slick({
+    $(function(){
+      $('#mainThumb').slick({
         accessibility: false,
         autoplay: true,
         autoplaySpeed: 0,
@@ -354,25 +352,11 @@
         lazyLoad: 'progressive',
         pauseOnFocus: false,
         pauseOnHover: false,
-        speed: 5000,
+        speed: 6500,
         touchMove: false,
         variableWidth: true
       });
     })
-
-    // var heroSwiper = new Swiper('.swiper-container', {
-    //   loop: true,
-    //   autoplay: {
-    //     delay: 500,
-    //   },
-    //   speed: 3000,
-    //   slidesPerView: 'auto',
-    //   centeredSlides: true,
-    //   spaceBetween: 12,
-    //   // preloadImages: false,
-    //   lazy: true
-    // })
-    
   </script>
 
 </body>
