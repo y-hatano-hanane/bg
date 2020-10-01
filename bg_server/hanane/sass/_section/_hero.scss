@@ -75,6 +75,8 @@
     &_inner {
       display: flex;
       flex-wrap: wrap;
+      max-width: calc( 50vw + #{$bp-laptop_l/2} ) ;
+      margin-left: auto;
       padding: $minspacer_v*8 0;
     }
 
@@ -104,7 +106,7 @@
     }
 
     .main_thumb {
-      flex: 1;
+      width: calc( 100% - 30em );
     }
 
     .buttons-box {
