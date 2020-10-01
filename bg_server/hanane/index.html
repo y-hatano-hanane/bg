@@ -337,7 +337,9 @@
     
     var heroSwiper = new Swiper('.swiper-container', {
       loop: true,
-      autoplay: true,
+      autoplay: {
+        delay: 10,
+      },
       speed: 3000,
       slidesPerView: 'auto',
       centeredSlides: true,
