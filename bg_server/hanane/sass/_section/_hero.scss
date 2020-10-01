@@ -106,7 +106,9 @@
     }
 
     .main_thumb {
-      flex: 1;
+      @include browser(ie) {
+        flex: 1;
+      }
       width: calc( 100% - 30em );
     }
 
