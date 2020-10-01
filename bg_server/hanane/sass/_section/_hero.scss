@@ -98,7 +98,7 @@
       font-size: 2.0rem;
       &_inner {
         display: inline-block;
-        width: 110%;
+        width: 104%;
         margin-left: $minspacer_h;
         padding: $minspacer_v*2 $minspacer_h*2;
         background: rgba($black, 0.8);
@@ -106,6 +106,7 @@
     }
 
     .main_thumb {
+      flex: 1;
       width: calc( 100% - 30em );
     }
 
@@ -171,13 +172,6 @@
     .thumb {
       align-self: flex-end;
       margin-bottom: 3em;
-    }
-    @include browser(ie) {
-      position: relative;
-      .sub_text {
-        position: absolute;
-        bottom: 48px;
-      }
     }
   }
 
