@@ -144,6 +144,7 @@
   @include mediaQuery-up(md) {
     &_inner {
       display: flex;
+      justify-content: space-around;
       align-items: flex-end;
       padding: $minspacer_v*5 $minspacer_h*3;
     }
@@ -151,7 +152,7 @@
       align-self: center;
     }
     .sub_text {
-      flex: 1;
+      display: inline-block;
       z-index: 2;
       min-width: 28em;
       margin: 0 auto;
@@ -167,8 +168,6 @@
   }
 
   @include mediaQuery-up(lg) {
-    .sub_text {
-    }
     .thumb {
       align-self: flex-end;
       margin-bottom: 3em;
