@@ -16,7 +16,8 @@
   <meta name="twitter:site" content="@hananesns" />
 
   <link rel="stylesheet" type="text/css" href="../common/css/style.css" />
-  <link rel="stylesheet" href="./package/Swiper/swiper.min.css" />
+
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
   <link rel="stylesheet" type="text/css" href="./css/style.css" />
   <script src="./js/script.js" defer></script>
 </head>
@@ -336,21 +337,38 @@
     <p>Copyright by BEAUTY GARAGE INC. All rights reserved.</p>
   </footer>
 
-  <script src="./package/Swiper/swiper.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <script>
-    
-    var heroSwiper = new Swiper('.swiper-container', {
-      loop: true,
-      autoplay: {
-        delay: 500,
-      },
-      speed: 3000,
-      slidesPerView: 'auto',
-      centeredSlides: true,
-      spaceBetween: 12,
-      // preloadImages: false,
-      lazy: true
+    $().ready(function(){
+      $('.swiper-wrapper').slick({
+        autoplay: true,
+        autoplaySpeed: 3000,
+        arrows: false,
+        centerMode: false,
+        centerPadding: '12px',
+        draggable: false,
+        infinite: true,
+        lazyLoad: 'progressive',
+        pauseOnFocus: false,
+        pauseOnHover: false,
+        touchMove: false,
+        variableWidth: true
+      });
     })
+
+    // var heroSwiper = new Swiper('.swiper-container', {
+    //   loop: true,
+    //   autoplay: {
+    //     delay: 500,
+    //   },
+    //   speed: 3000,
+    //   slidesPerView: 'auto',
+    //   centeredSlides: true,
+    //   spaceBetween: 12,
+    //   // preloadImages: false,
+    //   lazy: true
+    // })
     
   </script>
 
