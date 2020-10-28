@@ -71,6 +71,9 @@
       padding: 0 $minspacer_h;
     }
   }
+  .subscribe_warning {
+    font-size: 0.82em;
+  }
 
   @include mediaQuery-up(md) {
     position: relative;
@@ -130,6 +133,12 @@
       padding-right: 50%;
       width: 100%;
       font-size: 2.0rem;
+    }
+
+    .subscribe_warning {
+      position: relative;
+      z-index: 1;
+      font-size: 14px;
     }
 
   }

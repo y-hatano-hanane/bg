@@ -66,6 +66,9 @@
     &-text {
       display: inline-block;
       line-height: 1.4;
+      &_sub {
+        font-size: 0.82em;
+      }
     }
 
   }
